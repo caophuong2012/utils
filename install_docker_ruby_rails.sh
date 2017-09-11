@@ -19,6 +19,6 @@ docker exec -ti $docker_name gem install rails && echo "Install rails"
 # Run a Rails project
 rail_name="my-blog"
 docker exec -ti $docker_name apt-get install libsqlite3-dev -y
-docker exec -ti $docker_name rails new $rail_name && echo "Created new project"
+docker exec -ti $docker_name rails new ~/$rail_name && echo "Created new project"
 docker exec -ti $docker_name apt-get install nodejs -y && echo "Installed Nodejs"
 docker exec -ti $docker_name rails s -b 0.0.0.0 && echo "Allowed all inbound connections"
